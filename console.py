@@ -1,11 +1,8 @@
 #!/usr/bin/python3
 """Console Module"""
-from copy import deepcopy
 import shlex
 import cmd
 import models
-from models.base_model import BaseModel
-from models.engine.file_storage import FileStorage
 import models.engine
 
 
@@ -134,8 +131,4 @@ class HBNBCommand(cmd.Cmd):
         pass
 
 if __name__ == '__main__':
-    try:
-        HBNBCommand().cmdloop()
-    except KeyboardInterrupt:
-        print()
-        exit
+    HBNBCommand().cmdloop()
