@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Console Module"""
 from copy import deepcopy
 import shlex
 import cmd
@@ -6,8 +7,6 @@ import models
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
 import models.engine
-"""Console Module
-"""
 
 
 class HBNBCommand(cmd.Cmd):
@@ -45,7 +44,6 @@ class HBNBCommand(cmd.Cmd):
         else:
             desired_key = my_line[0] + '.' + my_line[1]
             print(my_storage[desired_key])
-#            models.storage.save()
 
     def do_destroy(self, line):
         """Deletes an instance based on the class name and id. Changes are then
@@ -86,7 +84,6 @@ class HBNBCommand(cmd.Cmd):
                 if my_line[0] == my_class:
                     my_list.append(my_storage[k])
             print(my_list)
-#        models.storage.save()
 
     def do_update(self, line):
         """Updates an instance based on the class name and id by adding
