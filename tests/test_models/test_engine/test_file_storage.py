@@ -37,7 +37,7 @@ class TestFileStorage(unittest.TestCase):
         my_storage = FileStorage()
         my_storage.new(my_model)
         my_storage.save()
-        file_existence = os.path.exists('file.json')
+        file_existence = os.path.exists(self.my_path)
         self.assertEqual(True, file_existence)
 
     def test_save_2(self):
@@ -65,8 +65,8 @@ class TestFileStorage(unittest.TestCase):
         """testing if file saves as correct file path name"""
         my_storage = FileStorage()
         my_storage.save()
-        expected_file_name = 'file.json'
-        self.assertEqual(expected_file_name, my_storage._FileStorage__file_path)
+        expected = self.my_path
+        self.assertEqual(expected, my_storage._FileStorage__file_path)
 
     def test_file_empty(self):
         """testing if file saves properly, and doesn't return an
@@ -75,7 +75,7 @@ class TestFileStorage(unittest.TestCase):
         my_storage = FileStorage()
         my_storage.new(my_model)
         my_storage.save()
-        self.assertEqual(os.stat('file.json').st_size==0, False)
+        self.assertEqual(os.stat(self.my_path).st_size == 0, False)
 
     def test_file_storage_file_path_exists(self):
         """Tests if __file_path is created correctly"""
