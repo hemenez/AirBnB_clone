@@ -1,10 +1,10 @@
 #!/usr/bin/python3
+"""FileStorage class"""
 import json
 import os
 import models
 from models.base_model import BaseModel
 from models.user import User
-""""""
 
 
 class FileStorage:
