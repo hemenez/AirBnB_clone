@@ -1,3 +1,5 @@
+<img src="https://github.com/jarehec/AirBnB_clone_v3/blob/master/dev/HBTN-hbnb-Final.png" width="160" height=auto />
+
 # AirBnB_clone Command Interface
 ---
 In this project we are creating a Command Interface for a Air BnB clone project.  It has file storage capabilites and an ability to interact with a number of data types that will later be added to.
